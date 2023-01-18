@@ -7,7 +7,7 @@ import delegation.model.CompanyInformationModel
 import kotlin.reflect.KProperty
 
 class CompanyInformationDelegate(
-    applicationDao: ApplicationDao,
+    val applicationDao: ApplicationDao,
 ) : CompanyInformation {
     override val name: String? = applicationDao.companyName
     override val legalForm: String? = null
